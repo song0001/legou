@@ -1,0 +1,32 @@
+body {
+    background: #f4f4f4;
+}
+
+@mixin over {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.newGoods p {
+    @include over;
+    padding: 0 15px;
+}
+
+.topList {
+    .list {
+        p {
+            @include over
+        }
+    }
+}
+
+.newCategoryList {
+    .item2 .name {
+        @include over
+    }
+}
+
+.van-tabbar-item--active {
+    color: rgb(195, 85, 89);
+}
