@@ -1,7 +1,7 @@
 <template>
   <div>
     <van-nav-bar
-      title="不凡"
+      title="乐购"
       left-text="返回"
       left-arrow
       @click-left="onClickLeft"
