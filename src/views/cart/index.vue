@@ -183,10 +183,19 @@ export default {
   padding: 40px auto;
 }
 .info {
+  font-size: 13px;
+  height: 100px;
   .left,
   .right {
+    height: 100%;
     display: inline-block;
     text-align: left;
+    p{
+      height: 50px;
+      margin: 0;
+      line-height: 50px;
+      text-align: center;
+    }
   }
   width: 100%;
   img {
