@@ -11,7 +11,9 @@
       <div class="img"></div>
       <div class="address" @click="goAddress">
         <div class="left">
-          <p>{{ address.name }}</p>
+          <p :class="{ undefault: address.is_default == 0 }">
+            {{ address.name }}
+          </p>
           <div v-if="address.is_default" class="moren">默认</div>
         </div>
         <div class="phone">
@@ -66,6 +68,7 @@ export default {
         this.goodsList = res.goodsList;
         this.allPrise = res.allPrise;
         this.address = res.address;
+        console.log(address);
       });
     },
     onClickLeft() {
@@ -117,7 +120,7 @@ export default {
   line-height: 50px;
   text-align: left;
   border-radius: 4px;
-  background-color: rgb(255, 255, 255,.9);
+  background-color: rgb(255, 255, 255, 0.9);
 }
 .address {
   width: 100%;
@@ -127,8 +130,13 @@ export default {
   .left {
     width: 25%;
     display: flex;
+    height: 65.34px;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    p {
+      margin: 5px;
+    }
   }
   .phone {
     width: 55%;
@@ -166,5 +174,9 @@ export default {
   justify-content: center;
   align-items: center;
   border-radius: 4px;
+}
+.undefault {
+  height: 100%;
+  line-height: 65.34px;
 }
 </style>
